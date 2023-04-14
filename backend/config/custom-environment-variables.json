@@ -1,3 +1,5 @@
 {
-  "jwtPrivateKey": "libtrackerop_jwtPrivateKey"
+  "jwtPrivateKey": "libtrackerop_jwtPrivateKey",
+  "clientID" :"clientID",
+  "clientSecret":"clientSecret"
 }

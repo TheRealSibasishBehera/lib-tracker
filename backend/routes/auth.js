@@ -8,6 +8,9 @@ const router = express.Router();
 const axios = require("axios");
 const querystring = require("node:querystring"); 
 
+const config = require("config");
+
+
 
 
 //this is for regular mail
@@ -37,8 +40,10 @@ function validate(req) {
 
 
 //these are for github logins
-const clientID = "1a81e934136e2a925cf5";
-const clientSecret = "fc2f2f94890cab82200cb4ae79e180b299392b9b";
+const clientID = config.get("clientID");
+const clientSecret = config.get("clientSecret");
+console.log(clientID);
+console.log(clientSecret);
 router.get("/getAccessToken", async (req, res) => {
   try {
     const code = req.query.code;
